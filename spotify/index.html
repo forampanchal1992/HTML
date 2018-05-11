@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>spotify</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <style type="text/css">
+    body{
+      font-family: 'Roboto', sans-serif;
+      margin: 0px;
+    }
+    img.logo{
+      width:132px;
+    }
+    img.album-art{
+      width: 374px;
+    }
+
+    /********************************************/
+    /*CSS for the menu bar */
+    nav{
+      background-color: #000000;
+      color: #ffffff;
+      height: 80px;
+    }
+
+    ul.menu-bar{
+      float: right;
+    }
+    ul.menu-bar li{
+      display: inline;
+    }
+    ul.menu-bar li a{
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+
+      /* spacing between menu items*/
+
+      padding: 28px 17px 28px 17px;
+    }
+    ul.menu-bar li a:hover{
+      color: #1D8954;
+    }
+    li.user-profile-item:hover{
+      color: #1D8954;
+    }
+
+    /**********************************************/
+    /** css for go premium*/
+    #go-premium{
+      text-align: center;
+      background: rgb(157,213,245);
+      background: radial-gradient(circle, rgba(157,213,245,1) 0%, rgba(91,195,255,1) 100%);
+      height: 650px;
+      padding: 300px;
+    }
+    #go-premium h1{
+      font-size: 80px;
+      color: #fff;
+      letter-spacing: -4px;
+
+      /*remove margin top*/
+      margin-top: 0px;
+    }
+    #go-premium h2{
+      font-size: 34px;
+      color: #fff;
+    }
+
+    .btn-round:hover{
+      background-color:#1ed760;
+
+    }
+    .btn-round{
+
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+        background-color: #1DB954;
+        padding-top: 20px;
+        padding-right: 55px;
+        padding-left: 55px;
+        padding-bottom: 20px;
+        border-radius: 50px;
+        color: #fff;
+    }
+
+
+
+
+    </style>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Menu -->
+  <nav>
+    <img src="images/logo-white.png" class="logo">
+      <ul class="menu-bar">
+        <li>
+          <a href="#">Premium</a>
+        </li>
+        <li>
+          <a href="#">Help</a>
+        </li>
+        <li>
+          <a href="#">Download</a>
+        </li>
+        <li>
+          |
+        </li>
+        <li>
+          <a href="#">Upgrade</a>
+        </li>
+        <li class="user-profile-item">
+          <span class="fa-layers fa-fw fa-3x">
+          <i class="far fa-circle"></i>
+          <i class="far fa-user" data-fa-transform="shrink-8"></i>
+        </span>
+        <a href="#">Profile</a>
+        <i class="fas fa-angle-down" data-fa-transform="shrink-1"></i>
+        </li>
+      </ul>
+  </nav>
+  <!-- section 1 -->
+  <section id="go-premium">
+    <h1>Go Premium. Be happy</h1>
+    <h2>Premium sounds amazing. Enjoy ad-free music on all your devices.*</h2>
+    <a href="" class="btn-round">GET SPOTIFY PREMIUM !</a>
+  </section>
+  <!-- section2 -->
+  <section>
+  <h2>Looking for music?</h2>
+  <p>
+    Start listening to the best new releases.
+  </p>
+  <a href="">Launch Web Player</a>
+
+  <br>
+  <img src="images/reputation.jpeg" class="album-art">
+  <img src="images/reputation.jpeg" class="album-art">
+  <img src="images/reputation.jpeg" class="album-art">
+  <br>
+  <img src="images/reputation.jpeg" class="album-art">
+  <img src="images/reputation.jpeg" class="album-art">
+  <img src="images/reputation.jpeg" class="album-art">
+
+</section>
+
+  <!--  Footer section1-->
+  <footer>
+    <img src="images/logo-black.png" class="logo">
+    <!--  col1-->
+    <h3>Company</h3>
+    <ul>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Jobs</a>
+      </li>
+      <li>
+        <a href="#">For the Record</a>
+      </li>
+    </ul>
+    <h3>Communities</h3>
+    <ul>
+      <li>
+        <a href="#">For Artists</a>
+      </li>
+      <li>
+        <a href="#">Developer</a>
+      </li>
+      <li>
+        <a href="#">Brands</a>
+      </li>
+    </ul>
+    <h3>Useful Links</h3>
+    <ul>
+      <li>
+        <a href="#">Help</a>
+      </li>
+      <li>
+        <a href="#">Gift</a>
+      </li>
+      <li>
+        <a href="#">Web Player</a>
+      </li>
+    </ul>
+    <!-- @TODO: PUT some ICONS HERE -->
+    <div class="fa-4x">
+      <span class="fa-layers fa-fw" style="background:MistyRose">
+        <i class="fas fa-circle" style="color:Tomato"></i>
+        <i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
+      </span>
+      <span class="fa-layers fa-fw" style="background:MistyRose">
+        <i class="fas fa-circle" style="color:Tomato"></i>
+        <i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
+      </span>
+      <span class="fa-layers fa-fw" style="background:MistyRose">
+        <i class="fas fa-circle" style="color:Tomato"></i>
+        <i class="fab fa-instagram" data-fa-transform="shrink-6"></i>
+      </span>
+
+    </div>
+
+
+</footer>
+
+
+
+  <!-- Footer 2 -->
+  <footer>
+    <ul>
+      <li>
+        <a href="#">Legal</a>
+      </li>
+      <li>
+        <a href="#">Privacy</a>
+      </li>
+      <li>
+        <a href="#">Cookies</a>
+      </li>
+      <li>
+        <a href="#">About Ads</a>
+      </li>
+    </ul>
+    <p>
+      <a href="#">Canada (English)</a>
+      <img src="images/ca.svg">
+    </p>
+    <p>
+    &copy; 2018 Spotify AB</p>
+</footer>
+</body>
+</html>
