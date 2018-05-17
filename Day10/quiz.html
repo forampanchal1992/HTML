@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <title>repl.it</title>
+    <style type="text/css">
+    h1{
+      font-size: 34px;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- HTML -->
+    <h1>Lets start a quiz!!!</h1>
+    <p>How much do u know about me?</p>
+    <div class="divider"></div>
+
+    <button id="btnShowQuiz" class="waves-effect waves-light btn"> Start Quiz</button>
+
+    <div id="quiz">
+      <p id="question"></p>
+      <label>
+        <input type="radio" class="with-gap" name="answer" value="a">
+          <span id="answer1"></span>
+      </label>
+      <label>
+        <input type="radio" class="with-gap" name="answer" value="b">
+          <span id="answer2"></span>
+      </label>
+    </div>
+
+    <div class="progress">
+        <div id="progressBar" class="determinate" style="width: 5%"></div>
+    </div>
+
+    <button id="btnNext" class="waves-effect waves-light btn"> Next </button>
+
+    <!-- quiz results go here -->
+    <div id="results"></div>
+
+
+    <!--JAVASCRIPT  -->
+    <script src="index.js"></script>
+    <script type="text/javascript">
+    // tracker variables
+    var curr = 0;
+       var correct = 0;
+       var wrong = 0;
+
+
+
+       function startQuiz() {
+         //UI NONSENSE
+         //change text button to START QUIZ
+
+         document.getElementById("btnShowQuiz").innerHTML = "START QUIZ";
+
+         //HIDE THE SETION FOR SCORE
+          document.getElementById("results").innerHTML = "";
+
+          //RESET PRogress BAR
+          document.getElementById("progressBar").style.width="0%";
+         showQuestion();
+       }
+
+       function showQuestion() {
+
+
+
+         // 1. get question from question bank
+         var item = questionBank[curr];
+
+         // 2. show question in webpage
+         document.getElementById("question").innerHTML = item["question"];
+
+         // 3. show answer choices in radio buttons
+         document.getElementById("answer1").innerHTML = item["answers"]["a"];
+         document.getElementById("answer2").innerHTML = item["answers"]["b"];
+
+       }
+
+       var step=0;
+       function nextQuestion() {
+         // 1.  Check if answer is correct?
+
+         // get the radio button the person selected
+         var userAnswer = document.querySelector('input[name="answer"]:checked').value;
+         console.log(userAnswer);
+
+         // check if the person's selection matches the
+         // actual answer
+         var actual = questionBank[curr]["correct"];
+         console.log(actual);
+
+         if (userAnswer == actual) {
+           correct = correct + 1;
+         }
+         else {
+           wrong = wrong + 1;
+         }
+
+
+         // 2.  Check if we should show the next question?
+
+
+
+         // increase the counter;
+         curr = curr + 1;
+         step = step + 33;
+           document.getElementById("progressBar").style.width=step + "%";
+
+         //@LOGIC - check if we should show the next question
+         if (curr == questionBank.length) {
+           // end the quiz & show the score
+
+           // show results
+           document.getElementById("results").innerHTML =
+               "<h2> Score </h2>"
+             + "<p>"
+             + "Correct: " + correct + " <br>"
+             + "Wrong: " + wrong
+             + "</p>"
+
+           // reset counters
+           curr = 0;
+           correct = 0;
+           wrong = 0;
+
+           document.getElementById("btnShowQuiz").innerHTML = "RESTART QUIZ";
+
+
+
+
+         }
+         else {
+           // show next question
+           showQuestion();
+         }
+       }
+
+       //-- click handlers
+
+       // start quiz button
+       document.getElementById("btnShowQuiz").addEventListener("click", startQuiz);
+
+       // next button
+       var next = document.getElementById("btnNext");
+       next.addEventListener("click", nextQuestion);
+
+
+
+     // var curr = -1;
+     //
+     //
+     // document.getElementById("btnStart").addEventListener("click",startQuiz);
+     //
+     //
+     // function startQuiz(){
+     //    alert(1111);
+     //
+     //    //curr = curr + 1;
+     //    var useranswer = document.querySelector("input[name='answer']:checked").value;
+     //    var correctAnswer = item["correct"];
+     //
+     //    var item = questionBank[1];
+     //     var question = item["question"];
+     //     // code to get the possible answers?
+     //
+     //     // OPTION 2
+     //     var answerA = item["answers"]["a"];
+     //     var answerB = item["answers"]["b"];
+     //
+     //     // code to get the CORRECT answer?
+     //     var correctAnswer = item["correct"];
+     //
+     //
+     //     // WRITE CODE TO POPULATE THE html
+     //     document.getElementById("question").innerHTML = question;
+     //     document.getElementById("answer1").innerHTML = answerA;
+     //     document.getElementById("answer2").innerHTML = answerB;
+     //
+     // }
+
+    // function checkAnswer() {
+    //   alert(123);
+    //   var useranswer = document.querySelector("input[name='answer']:checked").value;
+    //   var correctAnswer = item["correct"];
+    //
+    //   if(useranswer == correctAnswer)
+    //   {
+    //     console.log("CORRECT!!!!!");
+    //   }
+    //   else {
+    //     console.log("WRONG!!!!!!");
+    //   }
+    // }
+
+  //  document.getElementById("btnnext").addEventListener("click",checkAnswer);
+     ///get what user clicks on
+
+
+
+
+
+
+    </script>
+  </body>
+
+</html>
