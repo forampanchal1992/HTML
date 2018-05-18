@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Let's Paint!</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style type="text/css">
+
+    canvas{
+      border:1px solid black;
+    }
+    button#pink{
+      background-color: #D81B60;
+      border-color: #D81B60;
+    }
+    button#blue{
+      background-color: #0000FF;
+      border-color: #0000FF;
+    }
+    button#yellow{
+      background-color: #FFEB3B;
+      border-color: #FFEB3B;
+    }
+    i.fa-paint-brush{
+      color: white;
+    }
+    h1{
+      text-align: center;
+      padding-top: 80px;
+      margin-bottom: 20px;
+    }
+    div#controls{
+      border: 1px solid blue;
+      width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    div#drawingArea{
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Lets Paint</h1>
+    <div id="controls">
+
+        <button id="newDrawing" class="btn btn-action">
+          <i class="far fa-file"></i>
+        </button>
+        <button id="erase" class="btn btn-action">
+          <i class="fas fa-eraser"></i>
+        </button>
+        <button id="blue" class="btn btn-action">
+          <i class="fas fa-paint-brush"></i>
+        </button>
+        <button id="pink" class="btn btn-action">
+          <i class="fas fa-paint-brush"></i>
+        </button>
+        <button id="yellow" class="btn btn-action">
+          <i class="fas fa-paint-brush"></i>
+        </button>
+
+    <p>
+      Brush Size:::
+      <input id="slider" type="range" min="2" max="15" step="1">
+      <span id="brushSize"></span>
+    </p>
+    </div>
+
+    <div id="drawingArea">
+
+    <canvas id="main" width="960" height="500">
+    </canvas>
+  </div>
+    <script src="index.js">
+    </script>
+
+    <script type="text/javascript">
+    </script>
+
+  </body>
+</hmtl>

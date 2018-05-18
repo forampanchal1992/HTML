@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+
+    canvas{
+      border:1px solid black;
+    }
+
+    </style>
+  </head>
+  <body>
+    <canvas id="main" width="960" height="500">
+    </canvas>
+
+    <script src="index.js">
+    </script>
+
+    <script type="text/javascript">
+
+    //1. GET CONTEXT variable
+    var context = document.getElementById("main").getContext("2d");
+    context.strokeStyle="#FF00FF";
+    /////Width
+    //context.lineWidth = 5;
+
+    //2a. creating rectangle
+    context.rect(20,20,50,50);
+    context.fillRect(30,30,50,50);
+
+    // showing rectangle
+    context.stroke();
+
+    ///Drawing a line.......
+    context.beginPath();
+    context.moveTo(80,80);
+    context.lineTo(280,250);
+
+    context.stroke();
+
+    //draw circle
+    context.beginPath();
+    context.arc(95, 50, 40, 0, 2 * Math.PI);
+    context.stroke();
+
+
+
+
+    </script>
+  </body>
+  </html>
