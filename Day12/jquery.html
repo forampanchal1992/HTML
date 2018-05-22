@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JQUERY TUTORIAL</title>
+    <style type="text/css">
+    .banana{
+      display: none;
+    }
+    </style>
+</head>
+<body>
+  <h1>FADE EFFECTS</h1>
+  <img src="images/eggplant.png" id="eggplant">
+  <img src="images/watermelon.png" class="watermelon">
+  <img src="images/carrot.png" class="carrot">
+  <img src="images/banana.png" class="banana">
+
+  <h2>Sliding effetcs</h2>
+  <button id="btnABC">CLICK on ME!!!!</button>
+  <ul id="fruit-list">
+    <li>
+    <p>Watermelon</p>
+  </li>
+      <li>Banana</li>
+        <li>Carrot</li>
+          <li>Eggplant</li>
+  </ul>
+
+
+  <h2>CLIck</h2>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    //put your javascript code here
+    // $("#eggplant").fadeOut(3000);
+    // $(".watermelon").fadeOut(3000);
+    // $(".carrot").fadeOut(4000);
+    // $(".banana").fadeOut(4200);
+    // //
+    // $("#eggplant").fadeIn(3000);
+    // $(".watermelon").fadeIn(3000);
+    // $(".carrot").fadeIn(4000);
+    // $(".banana").fadeIn(4200);
+
+    /////slides
+    // $("#fruit-list").slideDown(3000);
+    // $("#fruit-list").slideUp(3000);
+
+    //CLICK
+    $("#btnABC").click(function () {
+        $("#fruit-list li p").append("<i class='fas fa-check'></i>DONE!!!");
+
+
+    });
+    // document.getElementById("btnABC").addEventListener("click", function () {
+    //   $("#fruit-list").slideUp(3000);
+    // });
+
+
+  </script>
+</body>
+</html>

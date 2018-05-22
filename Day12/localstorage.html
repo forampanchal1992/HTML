@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LOCAL STORAGE TUTORIAL</title>
+  </head>
+  <body>
+
+    <h1>LOCAL STORAGE EXAMPLE!!!!!!!</h1>
+    <label for="name">What's your name?</label>
+    <input id="name" type="text">
+    <br>
+    <label for="name">What's your ID?</label>
+    <input id="studentID" type="text">
+    <br>
+    <label for="name">What's your Program?</label>
+    <input class="program" type="text">
+    <br>
+    <button id="go"> SAVE!!!! </button>
+
+    <a href="next.html">Show Students</a>
+    <!-- <button id="show"> Show Database!!!! </button> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $("#go").click(function () {
+      var x = $("input#name").val();
+      var y = $("input#studentID").val();
+      var z = $("input.program").val();
+
+      localStorage.setItem("name",x);
+      localStorage.setItem("studentID",y);
+      localStorage.setItem("program",z);
+      alert("I saved Something");
+
+      var x = $("input#name").val("");
+      var y = $("input#studentID").val("");
+      var z = $("input.program").val("");
+
+    });
+
+    // $("#show").click(function () {
+    //   var i = localStorage.getItem("name");
+    //   alert(i);
+    // });
+    </script>
+  </body>
+  </html>

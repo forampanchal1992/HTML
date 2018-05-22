@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LOCAL STORAGE TUTORIAL</title>
+  </head>
+  <body>
+
+    <h1>Show Students!!!!!!!</h1>
+    <div id="info">
+    </div>
+
+    <a href="localstorage.html">Back To Previous Page</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    ///1. Logic get the stuff out of Database
+
+      var name =  localStorage.getItem("name");
+      var id =  localStorage.getItem("studentID");
+      var program = localStorage.getItem("program");
+      //////2. UI put the stuff into webpage
+      $("#info").append(
+        "<p> Student Name :" +name+ "</p>"
+        +"<p> Student ID : " +id+ "</p>"
+        +"<p> Program : "+ program+ "</p>"
+      );
+      // console.log("name = "+name);
+      // console.log("id = "+id);
+      // console.log("program = "+program);
+
+
+
+
+
+    </script>
+  </body>
+  </html>
